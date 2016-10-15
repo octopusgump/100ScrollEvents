@@ -1,0 +1,222 @@
+<!-- 
+#CFDBD5
+#E8EDDF
+#F5CB5C
+#242423
+#333533
+
+#011627
+#fdfffc
+#2ec4b6
+#e71d36
+#ff9f1c
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>@>@</title>
+	<link rel="stylesheet" href="style.css" />
+	<style type="text/css">
+		.skrollr-container{
+	width: 100%;
+	height:100%;
+	overflow:hidden;
+}
+
+.sections{
+	position:fixed;
+	width:200%;
+	height:200%;
+	top:0;
+	left:0;
+	background-color: red;
+}
+
+.section{
+	position:absolute;
+	top:0;
+	left:0;
+	width:50%;
+	height:50%;
+
+}
+
+#section1{
+	background-color: black;
+	border: 2px solid white;
+}
+	
+#section2{
+	background-color: black;
+	border: 2px solid white;
+	-ms-transform: translate(0%,100%); /* IE 9 */
+    -webkit-transform: translate(0%,100%); /* Chrome, Safari, Opera */
+    transform: translate(0%,100%);
+
+	
+}
+#section3{
+	background-color: black;
+	border: 2px solid white;
+	-ms-transform: translate(100%,100%); /* IE 9 */
+    -webkit-transform: translate(100%,100%); /* Chrome, Safari, Opera */
+    transform: translate(100%,100%);
+	
+}
+#section4{
+	background-color: black;
+	border: 2px solid white;
+	-ms-transform: translate(100%,0%); /* IE 9 */
+    -webkit-transform: translate(100%,0%); /* Chrome, Safari, Opera */
+    transform: translate(100%,0%);
+	
+}
+
+#helper{
+	/*display:none;*/
+	position:absolute;
+	left:0;
+	top:0;
+	height:600%;
+	width:20px;
+}
+
+.marker{
+	width:100%;
+	height:25%;
+}
+
+.one{
+	background-color: red;
+}
+
+.two{
+	background-color: yellow;
+
+}
+
+.three{
+	background-color: blue;
+
+}
+
+.four{
+	background-color: green;
+
+
+}
+
+.spin{
+	position:relative;
+	width:25%;
+	height:20px;
+	top:33%;
+	left:33%;
+	background-color: cyan;
+}
+	</style>
+</head>
+
+<body>
+    
+<div class="skrollr-container">
+		<div class = "sections"
+		data-0="transform:translate(0%,0%)"
+		data-50p="" 
+		data-150p="transform:translate(0%,-50%)"
+		data-200p=""
+		data-300p="transform:translate(-50%,-50%)"
+		data-350p=""
+		data-450p="transform:translate(-50%,0%)">
+			<div id="section1" class="section"
+			data-0="background-color: rgb(0,0,0);"
+			data-50p="" 
+			data-150p="background-color: rgb(255,0,0);"
+			data-300p="background-color: rgb(0,0,0);"
+			>
+			<div class = "spin" 
+			data-0="opacity:0;
+			-ms-transform: rotate(0deg);
+			-webkit-transform: rotate(0deg); 
+			transform: rotate(0deg);"
+			data-600p="opacity:1;
+			-ms-transform: rotate(720deg);
+			-webkit-transform: rotate(720deg); 
+			transform: rotate(720deg);"></div>
+	</div>
+	<div id="section2" class="section"
+	data-0="background-color: rgb(0,0,0);"
+	data-150p="" 
+	data-300p="background-color: rgb(255,255,0);"
+	data-450p="background-color: rgb(0,0,0);">
+<div class = "spin" 
+			data-0="opacity:0;
+			-ms-transform: rotate(0deg);
+			-webkit-transform: rotate(0deg); 
+			transform: rotate(0deg);"
+			data-600p="opacity:1;
+			-ms-transform: rotate(720deg);
+			-webkit-transform: rotate(720deg); 
+			transform: rotate(720deg);"></div></div>
+	<div id="section3" class="section"
+	data-0="background-color: rgb(0,0,0);"
+	data-300p="" 
+	data-450p="background-color: rgb(0,0,255);"
+	data-600p="background-color: rgb(0,0,0);">
+<div class = "spin" 
+			data-0="opacity:0;
+			-ms-transform: rotate(0deg);
+			-webkit-transform: rotate(0deg); 
+			transform: rotate(0deg);"
+			data-600p="opacity:1;
+			-ms-transform: rotate(720deg);
+			-webkit-transform: rotate(720deg); 
+			transform: rotate(720deg);"></div></div>
+	<div id="section4" class="section"
+	data-0="background-color: rgb(0,0,0);"
+	data-450p="" 
+	data-600p="background-color: rgb(0,255,0);">
+<div class = "spin" 
+			data-0="opacity:0;
+			-ms-transform: rotate(0deg);
+			-webkit-transform: rotate(0deg); 
+			transform: rotate(0deg);"
+			data-600p="opacity:1;
+			-ms-transform: rotate(720deg);
+			-webkit-transform: rotate(720deg); 
+			transform: rotate(720deg);"></div></div>
+</div>
+</div>
+         
+        <div class="next">
+            <a href="22.html"><h2>Next</h2></a>
+        </div>
+
+<div id="helper">
+	<div class="marker m1"></div>
+	<div class="marker m2"></div>
+	<div class="marker m3"></div>
+	<div class="marker m4"></div>
+    <div class="marker m5"></div>
+	<div class="marker m6"></div>
+	<div class="marker m7"></div>
+	<div class="marker m8"></div>
+	<div class="marker m9"></div>
+	<div class="marker m10"></div>
+</div>
+
+<script src="js/skrollr.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="js/script.js"></script>
+
+<script type="text/javascript">
+	var s = skrollr.init({
+		render: function(data) {
+		//Debugging - Log the current scroll position.
+		//console.log(data.curTop);
+	}
+});
+</script>
+
+</body>
+</html>
